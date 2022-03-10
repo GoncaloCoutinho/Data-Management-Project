@@ -13,7 +13,7 @@ These were the stages of the project:
 6. Answer the user stories;
 
 ## 1. Dataset
-I choose a books dataset that I retrieved from kaggle (LINK).
+I chose a books dataset that from kaggle ([link here][kaggle]).
 
 I then added two columns to the dataset:
  year = year from the publication_date column;
@@ -58,5 +58,9 @@ These where also performed in OpenRefine as seen below:
 ### Schema completeness
 In order to complete the schema for my user cases the following columns had to be added to the dataset: year of publication, genre, non-fiction or fiction.
 
-using the isbn code to get genre, check author and published date: (could also get a short description)
-https://www.google.de/search?q=isbn%3A+0471780936
+using the isbn code to get genre, check author and published date: (could also get a short description) [google][google search]
+
+[//]: # (These are reference links they get stripped out when the markdown processor does its job)
+
+   [kaggle]: <https://www.kaggle.com/jealousleopard/goodreadsbooks>
+   [google search]: <https://www.google.de/search?q=isbn%3A+0471780936>
