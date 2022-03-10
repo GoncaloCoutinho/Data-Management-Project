@@ -1,8 +1,6 @@
 # Data Management Project
 
-## Books Dataset
-
-### Introduction
+## Introduction
 
 This is an academic project focusing on data profiling and data cleaning.
 
@@ -14,7 +12,7 @@ These were the stages of the project:
 5. Clean the data;
 6. Answer the user stories;
 
-### 1. Dataset
+## 1. Dataset
 I choose a books dataset that I retrieved from kaggle (LINK).
 
 I then added two columns to the dataset:
@@ -26,25 +24,25 @@ I then added two columns to the dataset:
 This is a preview of the final dataset:
 [BIG TABLE WITH COLUMNS AND FIRST ROWS]
 
-### 2. Uncleaning 
+## 2. Uncleaning 
 I transformed the data using a pandas dataframe where I proceeded to change and unclean 25% of the dataset.
 
 *(code can be found in the unclean.py file)*
 
-### 3. User Stories
+## 3. User Stories
 The following are the 3 user stories:
 - As a librarian I want to know which are the top rated books?
 - What are the top non-fiction books of 2019?
 - What is the genre that is more polarizing in engaging people to write reviews? What genre has the most reviews?
 - Who is the author with the highest ratings count?
 
-### 4. Data profiling 
+## 4. Data profiling 
 The quality dimensions analyzed were the following
 
 This is the quality dimensions table:
 [QUALITY DIMENSIONS TABLE]
 
-### 5. Data Cleaning
+## 5. Data Cleaning
 The data cleaning was performed in OpenRefine.
 
 This is the recipe used:
@@ -52,10 +50,13 @@ This is the recipe used:
 
 Or link to the openrefine?
 
-### 6. Answering the user stories
+## 6. Answering the user stories
 The file answers.py has all the queries that answer the user stories.
 These where also performed in OpenRefine as seen below:
 [PHOTO]
 
 ### Schema completeness
 In order to complete the schema for my user cases the following columns had to be added to the dataset: year of publication, genre, non-fiction or fiction.
+
+using the isbn code to get genre, check author and published date: (could also get a short description)
+https://www.google.de/search?q=isbn%3A+0471780936
