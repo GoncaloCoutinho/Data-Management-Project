@@ -16,8 +16,8 @@ These were the stages of the project:
 I chose a books dataset that from kaggle ([link here][kaggle]).
 
 I then added two columns to the dataset:
- year = year from the publication_date column;
- valid_rating = Boolean value with True if the ratings_count column is greater than 100.
+- year = year from the publication_date column;
+- valid_rating = Boolean value &#8594; True if the ratings_count > 100 and text_reviews_count > 10. This will enable the exclusion of books with very few reviews when searching by highest average_rating.
 
 *(code can be found in the dataset.py)*
 
