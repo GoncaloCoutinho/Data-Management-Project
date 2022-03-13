@@ -75,6 +75,14 @@ def unclean_year(df):
     return sample.year.map(lambda y: int(y) + random.randint(1, 10))
 
 
+def unclean_valid_rating(df):
+    """Returns a subset of 25% of the dataframe with the column year value
+    increased by a random number between 1 to 10"""
+    sample = select_rows(df)
+    sample = sample.valid_rating.astype('str')
+    return sample.str.replace("True", "Yes").replace("False", "No")
+
+
 def unclean(df):
     """Returns a pandas DataFrame with 25% unclean data"""
     df.update(unclean_authors(df))
@@ -83,6 +91,7 @@ def unclean(df):
     df.update(unclean_publisher(df))
     df.update(unclean_year(df))
     df.update(unclean_title(df))
+    df.update(unclean_valid_rating(df))
 
     return df
 
