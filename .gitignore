@@ -1,5 +1,8 @@
-# Dataset
+# Ignore Datasets
 *.csv
 
-# Testing file
+# Ignore testing file
 test.py
+
+# Ignore virtual environment
+venv
