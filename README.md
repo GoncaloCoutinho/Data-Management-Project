@@ -82,7 +82,7 @@ In order to use the software's more complex functions I had to create a MySQL da
 | publisher | - | - | Yes | Yes | Yes | No | Yes | - | Yes |
 | year | - | - | Yes | Yes | Yes | Yes | No | - | Yes |
 | valid_rating | - | - | Yes | No | Yes | No | No | No | Yes |
-> Legend:
+> **Legend**:
 >
 > `-` &#8594; quality dimension not relevant to column;
 >
