@@ -40,7 +40,6 @@ The following are the 3 user stories:
 - As a librarian I want to know which are the top rated books by year for the last 10 years so that I can make recommendations to our users.
 - As a student I want to know which are the top 10 books that have the most text reviews so that I can study what leads to the most user engagement in books.
 - As a new fan of Harry Potter I would like to know how many Harry Potter related books in english exist.
-- As an historian I want to know which are the top 5 rated history books so that I can study them.
 
 
 ## 4. Data profiling
