@@ -1,9 +1,11 @@
-# Ignore Datasets and images
+# Ignore Datasets, images and jsons
 *.csv
 *.png
+*.json
 
 # Ignore testing file
 test.py
 
-# Ignore virtual environment
+# Ignore virtual environment and image folder
 venv
+images
