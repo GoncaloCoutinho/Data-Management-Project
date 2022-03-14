@@ -30,9 +30,13 @@ This is a preview of the final dataset:
 
 ## 2. Uncleaning 
 
-I transformed the data using a pandas dataframe and ran some functions I made to unclean 25% of the dataset.
+I transformed the data using a pandas dataframe and ran functions to unclean 25% of the dataset.
 
-Here is an example of a function, this function modifies the title of a sample (25% of the original dataset) to all uppercase: 
+Each uncleaning function was applied to a column on a 25% sample of the dataframe. Afterwards the dataframe was updated with the new values returned by each function.
+
+Each function used a different sample, guaranteeing that at the very least 25% of the rows in the data have some unclean column.
+
+Here is an example of a function that modifies the column title to all uppercase, thus affecting the consistency dimension:
 
 ```python
 def unclean_title(df):
@@ -46,7 +50,7 @@ def unclean_title(df):
 
 The following are the 3 user stories:
 - As a librarian I want to know which are the top rated books by year for the last 10 years so that I can make recommendations to our users.
-- As a student I want to know which are the top 10 books that have the most text reviews so that I can study what leads to the most user engagement in books.
+- As a student I want to know which are the top 10 books and respective authors that have the most text reviews so that I can study what leads to the most user engagement in books.
 - As a new fan of Harry Potter I would like to know how many Harry Potter related books exist in english.
 
 
@@ -132,15 +136,33 @@ Afterwards I proceeded to answer the user stories with SQL queries.
 
 - 1st User Story &#8594; As a librarian I want to know which are the top rated books by year for the last 10 years so that I can make recommendations to our users.
 
+These are the top books by each year considering the dataset was collected until December 8th, 2020:
+
 ![top rated books by year]
 
-- 2nd User Story &#8594; As a student I want to know which are the top 10 books that have the most text reviews so that I can study what leads to the most user engagement in books.
+>To answer this user-story, the dimensions consistency was considered for the column “title”, validity + accuracy "year" and validity + accuracy + currency for "average_rating"
+
+---
+
+- 2nd User Story &#8594; As a student I want to know which are the top 10 books and respective authors that have the most text reviews so that I can study what leads to the most user engagement in books.
+
+These are the top books by text review count considering the dataset was collected until December 8th, 2020:
 
 ![top text reviewed books]
 
+>To answer this user-story, the dimensions conformity + consistency was considered for the column “authors”, consistency for the column "title" and currency for the "text_reviews_count"
+
+---
+
 - 3rd User Story &#8594; As a new fan of Harry Potter I would like to know how many Harry Potter related books exist in english.
 
+The number of Harry Potter related books with language in english, as of December 8th 2020 is 18:
+
 ![harry potter book count]
+
+>To answer this user-story, the dimensions conformity + consistency was considered for the column “language_code”.
+
+---
 
 > *All the queries can be found in the answers.py file.* 
 

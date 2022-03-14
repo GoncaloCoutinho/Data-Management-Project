@@ -15,6 +15,10 @@ def check_missing_values(df):
 
 
 def unclean_title(df):
+    """Returns a subset of 25% of the dataframe with a change to the title
+    column. All the titles in this subset are converted to all uppercase.
+
+    Quality dimension affected: Consistency"""
     sample = select_rows(df)
     return sample.title.str.upper()
 
@@ -22,7 +26,9 @@ def unclean_title(df):
 def unclean_authors(df):
     """Returns a subset of 25% of the dataframe with a change to the authors
     column. Authors with more than 1 row get a random character appended to
-    the end of their name in those additional rows."""
+    the end of their name in those additional rows.
+
+    Quality dimension affected: Conformity"""
     sample = select_rows(df)
 
     # Select only authors that appear more than once
@@ -38,7 +44,9 @@ def unclean_authors(df):
 
 def unclean_avg_rat(df):
     """Returns a subset of 25% of the dataframe with the average_rating
-    changed to a negative value"""
+    changed to a negative value.
+
+    Quality dimension affected: Validity"""
     sample = select_rows(df)
     sample['average_rating'] = -sample['average_rating']
     return sample
@@ -46,7 +54,9 @@ def unclean_avg_rat(df):
 
 def unclean_lang_code(df):
     """Returns a subset of 25% of the dataframe with the language_code
-    changed to a uppercase value"""
+    changed to a uppercase value.
+
+    Quality dimension affected: Consistency"""
     sample = select_rows(df)
     return sample.language_code.str.upper()
 
@@ -54,7 +64,9 @@ def unclean_lang_code(df):
 def unclean_publisher(df):
     """Returns a subset of 25% of the dataframe with a change to the publisher
     column. Publishers with more than 1 row get a random character appended to
-    the end of their name in those additional rows."""
+    the end of their name in those additional rows.
+
+    Quality dimension affected: Conformity"""
     sample = select_rows(df)
 
     # Select only authors that appear more than once
@@ -70,14 +82,18 @@ def unclean_publisher(df):
 
 def unclean_year(df):
     """Returns a subset of 25% of the dataframe with the column year value
-    increased by a random number between 1 to 10"""
+    increased by a random number between 1 to 10.
+
+    Quality dimension affected: Validity"""
     sample = select_rows(df)
     return sample.year.map(lambda y: int(y) + random.randint(1, 10))
 
 
 def unclean_valid_rating(df):
-    """Returns a subset of 25% of the dataframe with the column year value
-    increased by a random number between 1 to 10"""
+    """Returns a subset of 25% of the dataframe with the column valid_rating
+    values changed to Yes and No instead of True and False respectfully.
+
+    Quality dimension affected: Conformity"""
     sample = select_rows(df)
     sample = sample.valid_rating.astype('str')
     return sample.str.replace("True", "Yes").replace("False", "No")
