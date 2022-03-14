@@ -1,7 +1,6 @@
 from database import database_read
 from pprint import pprint
 
-
 # Answer to 1st user story:
 first_us = database_read(query='SELECT title, average_rating, year '
                                'FROM clean_books '

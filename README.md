@@ -20,7 +20,7 @@ I then added two columns to the dataset:
 - year = year from the publication_date column;
 - valid_rating = Boolean value &#8594; True if the ratings_count > 100 and text_reviews_count > 10. This will enable the exclusion of books with very few reviews when searching by highest average_rating.
 
-*(code can be found in the dataset.py)*
+> *code can be found in the dataset.py*
 
 This is a preview of the final dataset:
 | bookID | title | authors | average_rating | isbn | isbn13 | language_code | num_pages | ratings_count | text_reviews_count | publication_date | publisher | year | valid_rating |
@@ -32,15 +32,15 @@ This is a preview of the final dataset:
 
 I transformed the data using a pandas dataframe and ran some functions I made to unclean 25% of the dataset.
 
-*(code can be found in the unclean.py file)*
+> *code can be found in the unclean.py file*
 
 ## 3. User Stories
 
 The following are the 3 user stories:
 - As a librarian I want to know which are the top rated books by year for the last 10 years so that I can make recommendations to our users.
 - As a student I want to know which are the top 10 books that have the most text reviews so that I can study what leads to the most user engagement in books.
+- As a new fan of Harry Potter I would like to know how many Harry Potter related books in english exist.
 - As an historian I want to know which are the top 5 rated history books so that I can study them.
-- As a fan of Harry Potter I would like to know how much does the whole collection of Harry Potter books costs?
 
 
 ## 4. Data profiling
@@ -49,7 +49,7 @@ The data profiling was done using the Talend Data Quality software. After runnin
 
 In order to use the software's more complex functions I had to create a MySQL database where I stored my unclean books dataframe.
 
-*(code can be found in the database.py file)*
+> *code can be found in the database.py file*
 
 ### Here are some examples of the analysis made:
 
@@ -65,7 +65,8 @@ In order to use the software's more complex functions I had to create a MySQL da
 *Checking the range of average_rating:*
 ![Range Analysis]
 
-### The analysis done is summarized in the following quality dimensions table:
+### Quality dimensions table:
+Following the analysis done the data quality was performed using a **quality dimension wise approach**, this is, for each quality dimension I analyzed it for all the columns.
 | Columns | Primary key | Uniqueness | Completeness | Consistency | Accuracy | Conformity | Validity | Currency & Timeliness | Reliability & Credibility |
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
 | book ID | Primary key | Yes | Yes | Yes | - | - | Yes | - | Yes |
@@ -110,38 +111,31 @@ The data cleaning was performed in OpenRefine.
 
 ### Recipe
 
-*The full recipe to can be found in the recipe.json file.* 
+> *The full recipe to can be found in the recipe.json file.* 
 
 ## 6. Answering the user stories
 
-The cleaning data was putted into MySQL in another table called clean_books. 
+The cleaning data was putted into MySQL in another table called clean_books.
+
+> *Code can be found in the clean_database.py file.* 
 Afterwards I proceeded to answer the user stories with SQL queries.
 
-*All the queries can be found in the answers.py file.* 
 
 ### User stories and answers:
 
 - Question &#8594; As a librarian I want to know which are the top rated books by year for the last 10 years so that I can make recommendations to our users.
 
-Answer:
+![top rated books by year]
 
 - Question &#8594; As a student I want to know which are the top 10 books that have the most text reviews so that I can study what leads to the most user engagement in books.
 
-Answer:
+![top text reviewed books]
 
-- Question &#8594; As an historian I want to know which are the top 5 rated history books so that I can study them.
+- Question &#8594; As a new fan of Harry Potter I would like to know how many Harry Potter related books in english exist.
 
-Answer:
+![harry potter book count]
 
-- Question &#8594; As a fan of Harry Potter I would like to know how much does the whole collection of Harry Potter books costs?
-
-Answer:
-
-### Schema completeness
-
-In order to complete the schema for my user cases the following columns had to be added to the dataset: year of publication, genre, non-fiction or fiction.
-
-using the isbn code to get genre, check author and published date: (could also get a short description) [google][google search]
+> *All the queries can be found in the answers.py file.* 
 
 [//]: # (These are reference links they get stripped out when the markdown processor does its job)
 
@@ -156,3 +150,6 @@ using the isbn code to get genre, check author and published date: (could also g
    [year_transformation]: https://s3.us-west-2.amazonaws.com/secure.notion-static.com/91ba6510-ee3b-4e1b-97af-7997f1f06195/data_cleaning_year.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220314%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220314T170538Z&X-Amz-Expires=86400&X-Amz-Signature=84a3d010ca1f17c1b4c7372397d24769ca3e810ca38d1e30db9f333ac6d7b370&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22data_cleaning_year.png%22&x-id=GetObject
    [average_rating]: https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e9efa84e-80d7-4533-8fed-3f7eb4ab0554/data_cleaning_absolute.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220314%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220314T170535Z&X-Amz-Expires=86400&X-Amz-Signature=86d037cefb310ee06fdfbe1ee3c69c4d23afed9f0f8be2d74f01c0cce73c80c2&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22data_cleaning_absolute.png%22&x-id=GetObject
    [regular expression]: https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f9173df2-ef9d-41be-8893-7592c8fababd/data_cleaning_language_code.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220314%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220314T170531Z&X-Amz-Expires=86400&X-Amz-Signature=ce38577bb98dbb792a10482d72ed4c208d0084af84827e8de579a85db2a88863&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22data_cleaning_language_code.png%22&x-id=GetObject
+   [top rated books by year]: https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a560fe56-324f-4a64-8ac0-e1c9c9a8df93/top_rated_books_by_year.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220314%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220314T182934Z&X-Amz-Expires=86400&X-Amz-Signature=8c4916b7ac598122f95e5d51e8cf905802b77a8575b4a42324db40d4af2f6abb&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22top_rated_books_by_year.png%22&x-id=GetObject
+   [top text reviewed books]: https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3f85fea2-df2c-4791-8024-f5e5ba04e49d/top_text_reviewed_books.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220314%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220314T182931Z&X-Amz-Expires=86400&X-Amz-Signature=000435be5780a38dd6651eaca523206ec6a737fbb44c2578c75940a4047cc0ba&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22top_text_reviewed_books.png%22&x-id=GetObject
+   [harry potter book count]: https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8750621c-4584-4084-8e68-85c81b2d32d6/how_many_harry_potter_books.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220314%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220314T182929Z&X-Amz-Expires=86400&X-Amz-Signature=d2a52d5c5d1ce91627463b08aba99f9623debc868d3a262266f70621c196771b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22how_many_harry_potter_books.png%22&x-id=GetObject
