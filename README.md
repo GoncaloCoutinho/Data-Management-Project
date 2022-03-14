@@ -31,6 +31,7 @@ This is a preview of the final dataset:
 ## 2. Uncleaning 
 
 I transformed the data using a pandas dataframe and ran some functions I made to unclean 25% of the dataset.
+
 *(code can be found in the unclean.py file)*
 
 ## 3. User Stories
@@ -47,6 +48,7 @@ The following are the 3 user stories:
 The data profiling was done using the Talend Data Quality software. After running several column analysis and structural analysis I was able to qualify the quality dimensions of each column.
 
 In order to use the software's more complex functions I had to create a MySQL database where I stored my unclean books dataframe.
+
 *(code can be found in the database.py file)*
 
 ### Here are some examples of the analysis made:
@@ -114,4 +116,3 @@ using the isbn code to get genre, check author and published date: (could also g
    [Simple Statistics]: https://s3.us-west-2.amazonaws.com/secure.notion-static.com/793a2f9d-9a22-46c1-a632-ee03efb42da7/data_profiling_2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220314%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220314T121324Z&X-Amz-Expires=86400&X-Amz-Signature=acc3c0931b778bdc6d1108c4b97dd88de85d08136fedbd5c52cd1fbd91b678d6&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22data_profiling_2.png%22&x-id=GetObject
    [Pattern Frequency]: https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5640d5ea-435a-4f73-95f9-754ae294b566/data_profiling_pattern_frequency_analysis_language_code.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220314%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220314T120848Z&X-Amz-Expires=86400&X-Amz-Signature=8303a63cc8a0b9914a26c5c5ff9972f7aefc20d09b428912cb2106b50dbcf999&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22data_profiling_pattern_frequency_analysis_language_code.png%22&x-id=GetObject
    [Range Analysis]: https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e8aa87a5-0d93-455b-8122-2f974ae382bf/data_profiling_numerical_functions.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220314%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220314T120845Z&X-Amz-Expires=86400&X-Amz-Signature=091b2bafabb26ccdf344ebfff6872b37718013c5db467bb42e66974e9afbc549&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22data_profiling_numerical_functions.png%22&x-id=GetObject
-   
