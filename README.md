@@ -94,16 +94,48 @@ In order to use the software's more complex functions I had to create a MySQL da
 
 The data cleaning was performed in OpenRefine.
 
-This is the recipe used:
-[PHOTO OF RECIPE]
+### Here are some examples of cleaning steps made:
 
-Or link to the openrefine?
+*Clustering algorithm to achieve conformity in the authors column:*
+![Clustering]
+
+*Regular expression to achieve conformity and consistency in the language_code column:*
+![regular expression]
+
+*If statement to achieve validity in the year column:*
+![year_transformation]
+
+*Absolute value transformation to achieve validity in the year column:*
+![average_rating]
+
+### Recipe
+
+*The full recipe to can be found in the recipe.json file.* 
 
 ## 6. Answering the user stories
 
-The file answers.py has all the queries that answer the user stories.
-These where also performed in OpenRefine as seen below:
-[PHOTO]
+The cleaning data was putted into MySQL in another table called clean_books. 
+Afterwards I proceeded to answer the user stories with SQL queries.
+
+*All the queries can be found in the answers.py file.* 
+
+### User stories and answers
+
+- Question &#8594; As a librarian I want to know which are the top rated books by year so that I can make recommendations for our users.
+
+Answer:
+
+- Question &#8594; As a student I want to know which are the top 10 books that have the most text reviews so that I can study what leads to the most user engagement in books.
+
+Answer:
+
+- Question &#8594; As an historian I want to know which are the top 5 rated history books so that I can study them.
+
+Answer:
+
+- Question &#8594; As a fan of Harry Potter I would like to know how much does the whole collection of Harry Potter books costs?
+
+Answer:
 
 ### Schema completeness
 
@@ -119,3 +151,7 @@ using the isbn code to get genre, check author and published date: (could also g
    [Simple Statistics]: https://s3.us-west-2.amazonaws.com/secure.notion-static.com/793a2f9d-9a22-46c1-a632-ee03efb42da7/data_profiling_2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220314%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220314T121324Z&X-Amz-Expires=86400&X-Amz-Signature=acc3c0931b778bdc6d1108c4b97dd88de85d08136fedbd5c52cd1fbd91b678d6&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22data_profiling_2.png%22&x-id=GetObject
    [Pattern Frequency]: https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5640d5ea-435a-4f73-95f9-754ae294b566/data_profiling_pattern_frequency_analysis_language_code.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220314%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220314T120848Z&X-Amz-Expires=86400&X-Amz-Signature=8303a63cc8a0b9914a26c5c5ff9972f7aefc20d09b428912cb2106b50dbcf999&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22data_profiling_pattern_frequency_analysis_language_code.png%22&x-id=GetObject
    [Range Analysis]: https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e8aa87a5-0d93-455b-8122-2f974ae382bf/data_profiling_numerical_functions.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220314%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220314T120845Z&X-Amz-Expires=86400&X-Amz-Signature=091b2bafabb26ccdf344ebfff6872b37718013c5db467bb42e66974e9afbc549&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22data_profiling_numerical_functions.png%22&x-id=GetObject
+   [Clustering]: https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6b2c2542-b4f3-43d4-8fc4-e3fe6461495c/data_cleaning_clustering.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220314%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220314T132006Z&X-Amz-Expires=86400&X-Amz-Signature=f3f28da61e4ad01e7520e7a804185a8d7dffc453d9ba5bf1c5c97f5b49f3812f&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22data_cleaning_clustering.png%22&x-id=GetObject
+   [year_transformation]: https://s3.us-west-2.amazonaws.com/secure.notion-static.com/91ba6510-ee3b-4e1b-97af-7997f1f06195/data_cleaning_year.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220314%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220314T170538Z&X-Amz-Expires=86400&X-Amz-Signature=84a3d010ca1f17c1b4c7372397d24769ca3e810ca38d1e30db9f333ac6d7b370&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22data_cleaning_year.png%22&x-id=GetObject
+   [average_rating]: https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e9efa84e-80d7-4533-8fed-3f7eb4ab0554/data_cleaning_absolute.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220314%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220314T170535Z&X-Amz-Expires=86400&X-Amz-Signature=86d037cefb310ee06fdfbe1ee3c69c4d23afed9f0f8be2d74f01c0cce73c80c2&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22data_cleaning_absolute.png%22&x-id=GetObject
+   [regular expression]: https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f9173df2-ef9d-41be-8893-7592c8fababd/data_cleaning_language_code.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220314%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220314T170531Z&X-Amz-Expires=86400&X-Amz-Signature=ce38577bb98dbb792a10482d72ed4c208d0084af84827e8de579a85db2a88863&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22data_cleaning_language_code.png%22&x-id=GetObject

@@ -6,9 +6,9 @@ from sqlalchemy import create_engine
 import os
 
 
-def setup_db():
-    """Creates a table in the booksdb database in MySQL with the
-    dirty_books dataframe from unclean.py"""
+def setup_db(df, name):
+    """Creates a table and inserts the dataframe (df) in the booksdb database
+    in MySQL."""
     # Set variables
     password = os.environ.get('MYSQL_PASS')
     user = 'root'
@@ -18,7 +18,7 @@ def setup_db():
     engine = create_engine(f"mysql+pymysql://{user}:{password}@localhost/{db}")
 
     # Insert whole DataFrame into MySQL
-    dirty_books.to_sql('books', con=engine, if_exists='append')
+    df.to_sql(name, con=engine, if_exists='append')
 
 
 def database_read(query):
@@ -49,4 +49,4 @@ def cursor_handler():
 
 
 if __name__ == "__main__":
-    setup_db()
+    setup_db(df=dirty_books, name='books')

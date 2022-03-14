@@ -1,7 +1,6 @@
 # File extensions to ignore
 *.csv
 *.png
-*.json
 *.gz
 
 # Ignore testing file
