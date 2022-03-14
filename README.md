@@ -82,9 +82,12 @@ In order to use the software's more complex functions I had to create a MySQL da
 | publisher | - | - | Yes | Yes | Yes | No | Yes | - | Yes |
 | year | - | - | Yes | Yes | Yes | Yes | No | - | Yes |
 | valid_rating | - | - | Yes | No | Yes | No | No | No | Yes |
-> Legend: 
-> `-` &#8594; quality dimension not relevant to column; 
+> Legend:
+>
+> `-` &#8594; quality dimension not relevant to column;
+>
 > `Yes` &#8594; quality dimension relevant to column and in check;
+>
 > `No` &#8594; quality dimension relevant to column but not met.
 
 ## 5. Data Cleaning
