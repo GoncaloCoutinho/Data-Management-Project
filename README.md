@@ -14,7 +14,7 @@ These were the stages of the project:
 
 ## 1. Dataset
 
-I chose a books dataset that from kaggle ([link here][kaggle]).
+I chose a books dataset from kaggle found [here][kaggle].
 
 I then added two columns to the dataset:
 - year = year from the publication_date column;
@@ -32,6 +32,14 @@ This is a preview of the final dataset:
 
 I transformed the data using a pandas dataframe and ran some functions I made to unclean 25% of the dataset.
 
+Here is an example of a function, this function modifies the title of a sample (25% of the original dataset) to all uppercase: 
+
+```python
+def unclean_title(df):
+    sample = select_rows(df)
+    return sample.title.str.upper()
+```
+
 > *code can be found in the unclean.py file*
 
 ## 3. User Stories
@@ -39,7 +47,7 @@ I transformed the data using a pandas dataframe and ran some functions I made to
 The following are the 3 user stories:
 - As a librarian I want to know which are the top rated books by year for the last 10 years so that I can make recommendations to our users.
 - As a student I want to know which are the top 10 books that have the most text reviews so that I can study what leads to the most user engagement in books.
-- As a new fan of Harry Potter I would like to know how many Harry Potter related books in english exist.
+- As a new fan of Harry Potter I would like to know how many Harry Potter related books exist in english.
 
 
 ## 4. Data profiling
@@ -110,27 +118,27 @@ The data cleaning was performed in OpenRefine.
 
 ### Recipe
 
-> *The full recipe to can be found in the recipe.json file.* 
+> *The full recipe can be found in the recipe.json file.* 
 
 ## 6. Answering the user stories
 
-The cleaning data was putted into MySQL in another table called clean_books.
+The cleaning data was put into MySQL in another table called clean_books.
 
 > *Code can be found in the clean_database.py file.* 
-Afterwards I proceeded to answer the user stories with SQL queries.
 
+Afterwards I proceeded to answer the user stories with SQL queries.
 
 ### User stories and answers:
 
-- Question &#8594; As a librarian I want to know which are the top rated books by year for the last 10 years so that I can make recommendations to our users.
+- 1st User Story &#8594; As a librarian I want to know which are the top rated books by year for the last 10 years so that I can make recommendations to our users.
 
 ![top rated books by year]
 
-- Question &#8594; As a student I want to know which are the top 10 books that have the most text reviews so that I can study what leads to the most user engagement in books.
+- 2nd User Story &#8594; As a student I want to know which are the top 10 books that have the most text reviews so that I can study what leads to the most user engagement in books.
 
 ![top text reviewed books]
 
-- Question &#8594; As a new fan of Harry Potter I would like to know how many Harry Potter related books in english exist.
+- 3rd User Story &#8594; As a new fan of Harry Potter I would like to know how many Harry Potter related books exist in english.
 
 ![harry potter book count]
 
