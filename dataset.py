@@ -21,7 +21,7 @@ def rating(row):
 # Create Dataframe
 myfile = 'books.csv'
 path = os.path.join(os.getcwd(), myfile)
-books = pd.read_csv(path, on_bad_lines='skip')
+books = pd.read_csv(path, on_bad_lines='skip', encoding='utf-8')
 
 # Add new columns, set index and remove whitespaces from col names
 books['year'] = books.apply(year, axis='columns')
@@ -31,4 +31,4 @@ books.columns = books.columns.str.lstrip()
 
 # Save to new csv
 if __name__ == '__main__':
-    books.to_csv('new_books.csv')
+    books.to_csv('new_books.csv', encoding='utf-8')

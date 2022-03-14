@@ -100,4 +100,4 @@ dirty_books = unclean(books)
 
 # Save to new csv
 if __name__ == '__main__':
-    dirty_books.to_csv('dirty_books.csv')
+    dirty_books.to_csv('dirty_books.csv', encoding='utf-8')

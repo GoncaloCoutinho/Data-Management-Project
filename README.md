@@ -24,8 +24,8 @@ I then added two columns to the dataset:
 This is a preview of the final dataset:
 | bookID | title | authors | average_rating | isbn | isbn13 | language_code | num_pages | ratings_count | text_reviews_count | publication_date | publisher | year | valid_rating |
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
-| 1	| Harry Potter and the Half-Blood Prince (Harry Potter  #6)	| J.K. Rowling/Mary GrandPrÃ© |	4.57 | 439785960 |	9.78044E+12 | eng |	652	| 2095690 |	27591 |	9/16/2006 |	Scholastic Inc. | 2006 | TRUE |
-| 2 | Harry Potter and the Order of the Phoenix (Harry Potter  #5) | J.K. Rowling/Mary GrandPrÃ© | 4.49 | 439358078 | 9.78044E+12 | eng |	870 | 2153167 |	29221 |	09-01-04 | Scholastic Inc. | 2004 | TRUE |
+| 1	| Harry Potter and the Half-Blood Prince (Harry Potter  #6)	| J.K. Rowling/Mary GrandPré |	4.57 | 439785960 |	9.78044E+12 | eng |	652	| 2095690 |	27591 |	9/16/2006 |	Scholastic Inc. | 2006 | TRUE |
+| 2 | Harry Potter and the Order of the Phoenix (Harry Potter  #5) | J.K. Rowling/Mary GrandPré | 4.49 | 439358078 | 9.78044E+12 | eng |	870 | 2153167 |	29221 |	09-01-04 | Scholastic Inc. | 2004 | TRUE |
 
 ## 2. Uncleaning 
 I transformed the data using a pandas dataframe and running some functions I made to unclean 25% of the dataset.

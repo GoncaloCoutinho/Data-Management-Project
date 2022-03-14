@@ -1,5 +1,6 @@
-# Ignore Datasets
+# Ignore Datasets and images
 *.csv
+*.png
 
 # Ignore testing file
 test.py
