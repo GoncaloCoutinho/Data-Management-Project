@@ -37,7 +37,7 @@ I transformed the data using a pandas dataframe and ran some functions I made to
 ## 3. User Stories
 
 The following are the 3 user stories:
-- As a librarian I want to know which are the top rated books by year so that I can make recommendations for our users.
+- As a librarian I want to know which are the top rated books by year for the last 10 years so that I can make recommendations to our users.
 - As a student I want to know which are the top 10 books that have the most text reviews so that I can study what leads to the most user engagement in books.
 - As an historian I want to know which are the top 5 rated history books so that I can study them.
 - As a fan of Harry Potter I would like to know how much does the whole collection of Harry Potter books costs?
@@ -119,9 +119,9 @@ Afterwards I proceeded to answer the user stories with SQL queries.
 
 *All the queries can be found in the answers.py file.* 
 
-### User stories and answers
+### User stories and answers:
 
-- Question &#8594; As a librarian I want to know which are the top rated books by year so that I can make recommendations for our users.
+- Question &#8594; As a librarian I want to know which are the top rated books by year for the last 10 years so that I can make recommendations to our users.
 
 Answer:
 
@@ -145,6 +145,7 @@ using the isbn code to get genre, check author and published date: (could also g
 
 [//]: # (These are reference links they get stripped out when the markdown processor does its job)
 
+   [OpenRefine Permalink]: <http://127.0.0.1:3333/project?project=1706991223211&ui=%7B%22facets%22%3A%5B%5D%7D>
    [kaggle]: <https://www.kaggle.com/jealousleopard/goodreadsbooks>
    [google search]: <https://www.google.de/search?q=isbn%3A+0471780936>
    [Functional Dependency]: https://s3.us-west-2.amazonaws.com/secure.notion-static.com/bc993805-404c-4bf6-99f3-1b2a4d927cd8/data_profiling_functional_dependency.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220314%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220314T120853Z&X-Amz-Expires=86400&X-Amz-Signature=31ab8fcb30ff7c4b5748e47d5977d41400b87cc3b9cfb24021d27ba197c52f29&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22data_profiling_functional_dependency.png%22&x-id=GetObject
