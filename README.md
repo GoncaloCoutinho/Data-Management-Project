@@ -68,12 +68,12 @@ In order to use the software's more complex functions I had to create a MySQL da
 ### The analysis done is summarized in the following quality dimensions table:
 | Columns | Primary key | Uniqueness | Completeness | Consistency | Accuracy | Conformity | Validity | Currency & Timeliness | Reliability & Credibility |
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
-| book ID | Primary key (functional dependency) | Yes | Yes | Yes | - | - | Yes | - | Yes |
+| book ID | Primary key | Yes | Yes | Yes | - | - | Yes | - | Yes |
 | title | - | - | Yes | No | Yes | Yes | Yes | - | Yes |
 | authors | - | - | Yes | Yes | Yes | No | Yes | - | Yes |
 | average_rating | - | - | Yes | Yes | No | Yes | No | No | Yes |
-| isbn | Possible primary key (functional dependency) | Yes | Yes | Yes | - | - | Yes | - | Yes |
-| isbn13 | Possible primary key (functional dependency) | Yes | Yes | Yes | - | - | Yes | - | Yes |
+| isbn | Possible primary key | Yes | Yes | Yes | - | - | Yes | - | Yes |
+| isbn13 | Possible primary key | Yes | Yes | Yes | - | - | Yes | - | Yes |
 | language_code | - | - | Yes | No | Yes | No | Yes | - | Yes |
 | num_pages | - | - | Yes | Yes | Yes | Yes | Yes | - | Yes |
 | ratings_count | - | - | Yes | Yes | Yes | Yes | Yes | No | Yes |
@@ -83,9 +83,9 @@ In order to use the software's more complex functions I had to create a MySQL da
 | year | - | - | Yes | Yes | Yes | Yes | No | - | Yes |
 | valid_rating | - | - | Yes | No | Yes | No | No | No | Yes |
 > Legend: 
-`-` &#8594; quality dimension not relevant to column; 
-`Yes` &#8594; quality dimension relevant to column and in check;
-`No` &#8594; quality dimension relevant to column but not met.
+> `-` &#8594; quality dimension not relevant to column; 
+> `Yes` &#8594; quality dimension relevant to column and in check;
+> `No` &#8594; quality dimension relevant to column but not met.
 
 ## 5. Data Cleaning
 
