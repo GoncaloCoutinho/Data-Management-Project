@@ -1,11 +1,12 @@
-# Ignore Datasets, images and jsons
+# File extensions to ignore
 *.csv
 *.png
 *.json
+*.gz
 
 # Ignore testing file
 test.py
 
-# Ignore virtual environment and image folder
+# Folders to ignore
 venv
 images
