@@ -2,6 +2,7 @@
 marp: true
 theme: default
 _class: invert
+paginate: true
 
 ---
 
@@ -14,7 +15,7 @@ Data profiling and cleaning of a data set about books
 
 ---
 
-<!-- footer: 'Data Management 1 • Prof. Dr. Ajinkya Prabhune • Prof. Ashish Chouhan • Std: Gonçalo Coutinho • Id: 11016322' -->
+<!-- footer: 'Data Management 1 • Prof. Dr. Ajinkya Prabhune • Ashish Chouhan • Std: Gonçalo Coutinho • Id: 11016322' -->
 <!-- _class: lead -->
 
 # Stages
